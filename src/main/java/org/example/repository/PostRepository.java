@@ -1,6 +1,10 @@
 package org.example.repository;
 
 import org.example.model.Post;
+<<<<<<< HEAD
+=======
+import org.springframework.stereotype.Repository;
+>>>>>>> fc16aab (Ghanges added)
 
 import java.util.List;
 import java.util.Map;
@@ -8,6 +12,7 @@ import java.util.Optional;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicLong;
 
+@Repository
 public class PostRepository {
     private final Map<Long, Post> posts = new ConcurrentHashMap<>();
     private final AtomicLong counter = new AtomicLong(1);

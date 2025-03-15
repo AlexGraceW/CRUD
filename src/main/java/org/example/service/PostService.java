@@ -1,11 +1,16 @@
 package org.example.service;
 
+<<<<<<< HEAD
+=======
+import org.springframework.stereotype.Service;
+>>>>>>> fc16aab (Ghanges added)
 import org.example.exception.NotFoundException;
 import org.example.model.Post;
 import org.example.repository.PostRepository;
 
 import java.util.List;
 
+@Service
 public class PostService {
     private final PostRepository repository;
 

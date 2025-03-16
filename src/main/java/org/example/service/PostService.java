@@ -1,9 +1,13 @@
 package org.example.service;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import org.springframework.stereotype.Service;
 >>>>>>> fc16aab (Ghanges added)
+=======
+import org.springframework.stereotype.Service;
+>>>>>>> 7c81be3 (Removed added)
 import org.example.exception.NotFoundException;
 import org.example.model.Post;
 import org.example.repository.PostRepository;
@@ -23,6 +27,7 @@ public class PostService {
     }
 
     public Post getById(long id) {
+<<<<<<< HEAD
         return repository.getById(id).orElseThrow(() -> new NotFoundException("Post not found"));
     }
 
@@ -34,3 +39,28 @@ public class PostService {
         repository.removeById(id);
     }
 }
+=======
+        return repository.getById(id)
+                .orElseThrow(() -> new NotFoundException("Post not found"));
+    }
+
+    public Post save(Post post) {
+        Post existingPost = repository.getById(post.getId()).orElse(null);
+        if (existingPost != null && existingPost.isRemoved()) {
+            throw new NotFoundException("Cannot update deleted post");
+        }
+        Post savedPost = repository.save(post);
+        if (savedPost == null) {
+            throw new NotFoundException("Post not found");
+        }
+        return savedPost;
+    }
+
+    public void removeById(long id) {
+        if (repository.getById(id).isEmpty()) {
+            throw new NotFoundException("Post not found");
+        }
+        repository.removeById(id);
+    }
+}
+>>>>>>> 7c81be3 (Removed added)

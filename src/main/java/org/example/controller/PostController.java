@@ -1,6 +1,7 @@
 package org.example.controller;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import com.google.gson.Gson;
 import org.example.exception.NotFoundException;
 import org.example.model.Post;
@@ -15,6 +16,8 @@ public class PostController {
     private final PostService service;
     private final Gson gson = new Gson();
 =======
+=======
+>>>>>>> 7c81be3 (Removed added)
 import org.springframework.web.bind.annotation.*;
 import org.example.model.Post;
 import org.example.service.PostService;
@@ -25,12 +28,16 @@ import java.util.List;
 @RequestMapping("/api/posts")
 public class PostController {
     private final PostService service;
+<<<<<<< HEAD
 >>>>>>> fc16aab (Ghanges added)
+=======
+>>>>>>> 7c81be3 (Removed added)
 
     public PostController(PostService service) {
         this.service = service;
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     public void all(HttpServletResponse response) throws IOException {
         response.setContentType(APPLICATION_JSON);
@@ -61,6 +68,8 @@ public class PostController {
     }
 }
 =======
+=======
+>>>>>>> 7c81be3 (Removed added)
     @GetMapping
     public List<Post> all() {
         return service.all();
@@ -80,5 +89,9 @@ public class PostController {
     public void removeById(@PathVariable long id) {
         service.removeById(id);
     }
+<<<<<<< HEAD
 }
 >>>>>>> fc16aab (Ghanges added)
+=======
+}
+>>>>>>> 7c81be3 (Removed added)

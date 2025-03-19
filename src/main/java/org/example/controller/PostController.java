@@ -35,9 +35,3 @@ public class PostController {
         service.removeById(id);
     }
 }
-<<<<<<< HEAD
-}
->>>>>>> fc16aab (Ghanges added)
-=======
-}
->>>>>>> 7c81be3 (Removed added)
